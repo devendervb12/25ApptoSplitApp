@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+				sap.ui.localResources("zapp_splitapp");
+				var app = new sap.m.App("idApp",{initialPage:"idEmp_Reg1"});
+				var page = sap.ui.view({id:"idEmp_Reg1", viewName:"zapp_splitapp.Emp_Reg", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				
+				var oLink = sap.ui.view({
+					id : "idLink",
+					viewName : "zapp_splitapp.LinkPage",
+					type : sap.ui.core.mvc.ViewType.XML
+				});
+				
+				var oRegDtl = sap.ui.view({
+					id : "idRegDtl",
+					viewName : "zapp_splitapp.RegistrationDetailPage",
+					type : sap.ui.core.mvc.ViewType.XML
+				});
+				
+				var oWrkExp = sap.ui.view({
+					id : "idWrkExp",
+					viewName : "zapp_splitapp.WorkExperience",
+					type : sap.ui.core.mvc.ViewType.XML
+				});
+				
+				
+				var oSplitApp = new sap.m.SplitApp("idSplitApp");
+				oSplitApp.addMasterPage(oLink);
+				
+				oSplitApp.addDetailPage(oRegDtl);
+				oSplitApp.addDetailPage(oWrkExp);
+				
+				app.addPage(oSplitApp);
+				app.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
