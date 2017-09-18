@@ -12,26 +12,27 @@
 		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
 
 		<script>
-				sap.ui.localResources("zapp_splitapp");
+				sap.ui.localResources("view");
+				sap.ui.localResources("controller");
 				var app = new sap.m.App("idApp",{initialPage:"idEmp_Reg1"});
-				var page = sap.ui.view({id:"idEmp_Reg1", viewName:"zapp_splitapp.Emp_Reg", type:sap.ui.core.mvc.ViewType.XML});
+				var page = sap.ui.view({id:"idEmp_Reg1", viewName:"view.Emp_Reg", type:sap.ui.core.mvc.ViewType.XML});
 				app.addPage(page);
 				
 				var oLink = sap.ui.view({
 					id : "idLink",
-					viewName : "zapp_splitapp.LinkPage",
+					viewName : "view.LinkPage",
 					type : sap.ui.core.mvc.ViewType.XML
 				});
 				
 				var oRegDtl = sap.ui.view({
 					id : "idRegDtl",
-					viewName : "zapp_splitapp.RegistrationDetailPage",
+					viewName : "view.RegistrationDetailPage",
 					type : sap.ui.core.mvc.ViewType.XML
 				});
 				
 				var oWrkExp = sap.ui.view({
 					id : "idWrkExp",
-					viewName : "zapp_splitapp.WorkExperience",
+					viewName : "view.WorkExperience",
 					type : sap.ui.core.mvc.ViewType.XML
 				});
 				
