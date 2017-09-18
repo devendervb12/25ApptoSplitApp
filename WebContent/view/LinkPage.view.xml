@@ -1,0 +1,18 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="controller.LinkPage" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+	         <List>
+	              <items>
+	                 <StandardListItem title="Registration Details" type="Active" press="onRegDtl"/>
+	                 <StandardListItem title="Work Experience" type="Active" press="onWorkExp"/>
+	                 <StandardListItem title="Contact Details" type="Active"/>
+	                 <StandardListItem title="Bank Details" type="Active"/>
+	                 <StandardListItem title="Certifications" type="Active"/>
+	                 <StandardListItem title="Personal Documents" type="Active"/>
+	                 <StandardListItem title="Summary" type="Active"/>
+	              </items>
+	           </List>
+		</content>
+	</Page>
+</core:View>
